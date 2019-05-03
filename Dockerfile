@@ -1,5 +1,7 @@
-FROM debian:latest
+FROM debian:buster
 MAINTAINER Jose A Alferez <correo@alferez.es>
+
+ENV DEBIAN_FRONTEND noninteractive
 
 RUN echo "Etc/UTC"  > /etc/timezone
 RUN dpkg-reconfigure tzdata
