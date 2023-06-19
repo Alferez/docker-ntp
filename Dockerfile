@@ -1,4 +1,4 @@
-FROM debian:buster
+FROM debian:12
 MAINTAINER Jose A Alferez <correo@alferez.es>
 
 ENV DEBIAN_FRONTEND noninteractive
@@ -14,4 +14,4 @@ RUN rm -rf /tmp/* /var/tmp/*
 RUN rm -rf /var/lib/apt/lists/*
 
 ENTRYPOINT ["ntpd"]
-CMD ["-n" ,"-b", "-g", "-l", "stdout"]
+CMD ["-n", "-g", "-l", "stdout"]
